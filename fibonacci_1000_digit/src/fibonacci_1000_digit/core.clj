@@ -8,12 +8,12 @@
 
 (defn seq-way
   []
-  (let [fib-seq (fib-seq* (bigint 0) (bigint 1))]
+  (let [fib-seq (fib-seq* (bigint 1) (bigint 1))]
     (inc (count (take-while #(< % (math/expt 10 999)) fib-seq)))))
 
 (defn loop-way
   []
-  (loop [a (bigint 0)
+  (loop [a (bigint 1)
          b (bigint 1)
          i 1]
     (if (< a (math/expt 10 999))
